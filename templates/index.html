@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 学习笔记</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Python 学习笔记</h1>
+    <p>从零开始学习 Python</p>
+</header>
+
+<section class="hero">
+    <h2>欢迎来到 Python 学习网站</h2>
+    <p>这里整理了 Python 的核心知识点与示例。</p>
+</section>
+
+<div class="container">
+    {% for note in notes %}
+    <div class="card">
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+        <button>查看详情</button>
+    </div>
+    {% endfor %}
+</div>
+
+<footer>
+    <p>Python Notes Website © 2026</p>
+</footer>
+
+</body>
+</html>
